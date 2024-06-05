@@ -1,0 +1,240 @@
+                    <!DOCTYPE html>
+                    <html lang="ar">
+                    <head>
+                        <link rel="icon" href="icon.png" type="image/png">
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Anas Ahmed | مشاريعي</title>
+                        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+                        <style>
+                            body {
+                                font-family: 'Cairo', sans-serif;
+                                background-color: #111;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            header {
+                                background-color: #222;
+                                color: white;
+                                padding: 10px 0;
+                                overflow: hidden;
+                                position: fixed;
+                                width: 100%;
+                                top: 0;
+                                z-index: 1000;
+                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            }
+
+                            .navbar {
+                                overflow: hidden;
+                            }
+
+                            .navbar a {
+                                float: right;
+                                display: block;
+                                color: #f2f2f2;
+                                text-align: center;
+                                padding: 14px 20px;
+                                text-decoration: none;
+                                font-size: 17px;
+                                font-weight: 700;
+                            }
+
+                            .navbar a:hover {
+                                background-color: #444;
+                            }
+
+                            .active, .home {
+                                background-color: transparent;
+                            }
+
+                            .about {
+                                background-color: transparent;
+                            }
+
+                            .home {
+                                background-color: #4CAF50;
+                            }
+
+                            .social {
+                                background-color: transparent;
+                            }
+
+                            .main-content {
+                                padding: 20px;
+                                color: white;
+                            }
+
+                            .main-content p {
+                                text-align: left;
+                            }
+
+                            .main-content img {
+                                float: right;
+                                margin-left: 20px;
+                                max-width: 300px;
+                            }
+
+                            .container {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: 120px;
+                            }
+
+                            /* أسلوب التنسيق للمستطيل */
+                            .rectangle {
+                                width: 300px;
+                                height: 450px;
+                                background-color: white;
+                                margin: 10px;
+                                border-radius: 10px;
+                                transition: transform 0.3s;
+                                cursor: pointer;
+                                position: relative;
+                                text-align: center;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                            }
+
+                            /* أسلوب التنسيق للعنوان */
+                            .rectangle h2 {
+                                margin-top: 40px;
+                                color: #333;
+                            }
+
+                            .rectangle hr {
+                                width: 80%;
+                                border: 1px solid #ddd;
+                            }
+
+                            .rectangle h4 {
+                                color: #666;
+                                padding: 0 20px;
+                                text-align: center;
+                            }
+
+                            /* أسلوب التنسيق للأزرار داخل المستطيل */
+                            .rectangle .button-container {
+                                position: absolute;
+                                bottom: 20px;
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            .rectangle button {
+                                display: inline-block;
+                                margin: 10px;
+                                padding: 10px 20px;
+                                background-color: #4CAF50;
+                                color: white;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: background-color 0.3s, transform 0.3s;
+                                font-size: 16px;
+                                text-transform: uppercase;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                            }
+
+                            /* تعريف التحويل للأنميشن عند التحويم */
+                            .rectangle:hover {
+                                transform: scale(1.05);
+                            }
+
+                            /* تعريف تغيير لون الخلفية عند التحويم للزر */
+                            .rectangle button:hover {
+                                background-color: #45a049;
+                                transform: translateY(-2px);
+                            }
+
+                            .rectangle button:active {
+                                transform: translateY(2px);
+                            }
+
+                            /* الأسلوب الجديد لتحديد المستطيل عند تحويل المؤشر */
+                            .rectangle:hover {
+                                background-image: url('n.mp4');
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                            }
+                            .container {
+                                display: grid;
+                                grid-template-columns: 1fr; /* عرض واحد للهواتف */
+                                gap: 20px; /* تباعد بين المستطيلات */
+                                justify-items: center; /* محاذاة المستطيلات في الوسط */
+                            }
+
+                            @media screen and (min-width: 600px) {
+                                .container {
+                                    grid-template-columns: repeat(2, 1fr); /* عرضين جانب بعض للشاشات التي يكون عرضها 600 بيكسل فأعلى */
+                                }
+                            }
+                            .container {
+                                display: flex;
+                                flex-direction: column; /* ترتيب عمودي للشاشات الصغيرة */
+                                align-items: center; /* محاذاة المستطيلات في الوسط */
+                            }
+
+                            @media screen and (min-width: 600px) {
+                                .container {
+                                    flex-direction: row; /* ترتيب أفقي للشاشات التي يكون عرضها 600 بيكسل فأكثر */
+                                }
+                            }
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <div class="navbar">
+                                <a href="index.html" class="active">الرئيسية</a>
+                                <a href="about me.html" class="about">عني</a>
+                                <a href="projects.html" class="home">مشاريعي</a>
+                            </div>
+                        </header>
+
+                        <div class="container">
+                            <div class="rectangle">
+                                <h2>viss code</h2>
+                                <hr>
+                                <h4>
+                                    هو محرر أكواد لتطوير مواقع الويب، يدعم تحرير وتنسيق أكواد البرمجة بسهولة، ويوفر أدوات تصحيح متقدمة ودعم للإضافات، مما يعزز إنتاجية المطورين ويجعل عملية البرمجة أكثر كفاءة وسهولة.
+                                </h4>
+                                <div class="button-container">
+                                    <button onclick="window.location.href='https://anas2090.github.io/viss/';">رؤية الموقع</button>
+                                                    <button onclick="window.location.href='https://www.google.com';">تحميل التطبيق</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="rectangle">
+                                                <h2>Qate3 | قاطع</h2>
+                                                <hr>
+                                                <h4>
+                                                    قاطع هو موقع يدعم القضية الفلسطينية عن طريق معرفة المنتجات المقاطعة و المنتجات البديل لها و هو قيد التطوير
+                                                </h4>
+                                                <div class="button-container">
+                                                    <button onclick="window.location.href='https://anas2090.github.io/qata/index2.html';">رؤية الموقع</button>
+                                                    <button onclick="window.location.href='https://www.google.com';">تحميل التطبيق</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function() {
+                                                const rectangles = document.querySelectorAll('.rectangle');
+
+                                                rectangles.forEach(rectangle => {
+                                                    rectangle.addEventListener('mouseenter', function() {
+                                                        this.style.backgroundImage = "url('n.mp4')";
+                                                        this.style.backgroundSize = "cover";
+                                                        this.style.backgroundRepeat = "no-repeat";
+                                                    });
+
+                                                    rectangle.addEventListener('mouseleave', function() {
+                                                        this.style.backgroundImage = "none";
+                                                    });
+                                                });
+                                            });
+                                        </script>
+                                    </body>
+                                    </html>
